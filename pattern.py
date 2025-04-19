@@ -22,13 +22,10 @@ def generate_square(rows):
         square += numbers + "\n"
     return square
 
-# Streamlit application
 st.title("Number Pattern Generator")
 
-# Input: Number of rows for the patterns
 rows = st.number_input("Enter the number of rows:", min_value=1, value=5)
 
-# Buttons for different patterns
 if st.button("Generate Pyramid"):
     pattern = generate_pyramid(rows)
     st.text_area("Generated Pyramid Pattern:", value=pattern, height=300)
